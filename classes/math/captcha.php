@@ -7,6 +7,12 @@ class Math_Captcha {
 	 * @var Kohana_Config
 	 */
 	protected $_config;
+	
+	/**
+	 *
+	 * @var Formula
+	 */
+	protected $_formula;
 
 	/**
 	 * Max integral top limit
@@ -69,7 +75,9 @@ class Math_Captcha {
 		$this->_min_lower = (int) rand($this->_config['min_lower'], 0);
 		$this->_summand_count = (int) $this->_config['summand_count'];
 		$this->_symbol_size = (int) $this->_config['symbol_size'];
-		$this->_symbol_padding = (int) $this->_config['symbol_padding'];
+		$this->_symbol_padding = (int) $this->_config['symbol_padding'];$this->_d = (int) $this->_config['symbol_padding'];
+		$this->_formula = new Formula();
+		
 	}
 
 	/**
