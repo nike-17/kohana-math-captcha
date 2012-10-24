@@ -33,10 +33,12 @@
 
 //********* PARAMETERS TO MODIFY *********************************
 // The four global variables. Uncomment the line if you need it.
-//global $dirfonts,$dirimg,$symboles,$fontesmath;
 // choose the type of the declaration according to your server settings (some servers don't accept the dirname(__FILE__) command for security reasons).
 // NEW in 0.3 version : no more / at the end of $dirfonts and $dirimg
 // absolute path to the fonts directory
+
+global $dirfonts,$dirimg,$symboles,$fontesmath;
+
 $dirfonts = realpath(dirname(__FILE__)) . "/fonts";
 
 // absolute path to the images directory
@@ -952,6 +954,7 @@ class expression_math extends expression {
 		$hauteur = 1;
 		$dessus = 1;
 		$dessous = 1;
+		$img = array();
 		for ($i = 0; $i < count($this->noeuds); $i++) {
 			if ($this->noeuds[$i]->texte != '(' && $this->noeuds[$i]->texte != ')') {
 				$this->noeuds[$i]->dessine($taille);
@@ -984,6 +987,7 @@ class expression_math extends expression {
 		$blanc = imagecolortransparent($result, $blanc);
 		ImageFilledRectangle($result, 0, 0, $largeur - 1, $hauteur - 1, $blanc);
 		$pos = 0;
+		
 		for ($i = 0; $i < count($img); $i++) {
 			if (isset($img[$i])) {
 				ImageCopy($result, $img[$i], $pos, $dessus - $base[$i], 0, 0, imagesx($img[$i]), imagesy($img[$i]));

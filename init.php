@@ -1,2 +1,2 @@
 <?php defined('SYSPATH') or die('No direct script access.');
-require_once Kohana::find_file('vendor/formula-publish/Library', 'Formula');
+require_once Kohana::find_file('vendor/phpmathpublisher', 'mathpublisher');
