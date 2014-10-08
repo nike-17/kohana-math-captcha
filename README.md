@@ -8,10 +8,10 @@ Main ideas was
 - Provide OOP wrapper over http://www.xm1math.net/phpmathpublisher/
 - Provide backend for https://github.com/nike-17/kohana-captcha-3.2 and render math captcha
 
-Beside the fact, that i'm only contributer  of this project at gitub, some ideas was inspired by discussions with Vladimir Chernyshov, Anton Matveenko and Victor Lavrenko.
+Beside the fact, that i'm only contributer  of this project at github, some ideas was inspired during discussions with Vladimir Chernyshov, Anton Matveenko and Victor Lavrenko.
 
 This project is not supported anymore, please if you are not insane never try to use it at production.
 You should learn js, python and ruby.
-Please do not start new projects using Kohana - even guy who created it don't like it anymore.
+Please do not start new projects using Kohana or kohana-math-captcha - even guy who created it don't like it anymore.
 
 Stay hard, stay true. 
